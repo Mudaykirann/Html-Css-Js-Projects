@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        transition: 1s;
+    }
+    h2{
+        font-size: 1.7rem; 
+        color: aqua;
+        padding-top: 25px;
+        text-align: center;
+    }
+    .container{
+        margin: 50px auto;
+        max-width: 500px;
+        border: 1px solid grey;
+        border-radius: 14px;
+        padding-bottom:20px ;
+        background-color: #191e24;
+        box-shadow: 10px 10px 20px lightgrey;
+    }
+    @media screen and (max-width:545px) {
+        body{
+            background-color:#191e24;
+            transition: 1s;
+        }
+        .container{
+            box-shadow: none;
+            border: none;
+            margin-top: 30px;
+        }
+    }
+    .skill-container{
+        color: white;
+        width: 88%;
+        height: 20px;
+        margin:60px auto;
+        font-weight: 500;
+        font-size: large;
+    }
+    .skill-bar{
+        width: 100%;
+        height: 15px;
+        background-color: white;
+        margin: 15px auto;
+        border-radius: 20px;
+    }
+    .skill-percentage{
+        border-radius: 10px;
+        height: 100%;
+        background-color: #098fe4;
+        position: relative;
+        animation: anim 3s forwards;
+    }
+    .html .skill-percentage{
+        width: 90%;
+    }
+    .css .skill-percentage{
+        width: 70%;
+    }
+    .javascript .skill-percentage{
+        width: 50%;
+    }
+    .bootstrap .skill-percentage{
+        width: 80%;
+    }
+    .reactjs .skill-percentage{
+        width: 20%;
+    }
+    .python .skill-percentage{
+        width: 90%;
+    }
+    @keyframes anim {
+        0%{
+            width: 0;
+        }
+    }
+    .tooltip{
+        width: 45px;
+        height: 30px;
+        color: black;
+        background-color: white;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        padding: 3px;
+        padding-left: 7px;
+        font-size: 1rem;
+        position: absolute;
+        right: -10px;
+        bottom:30px;
+    }
+    .tooltip::after{
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        transform: rotate(30deg);
+    }
+
+</style>
+<body>
+    <main class="container">
+        <h2>Animated Containers</h2>
+        <div class="skill-container">
+            <span>HTML</span>
+            <div class="html skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">90%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <span>CSS</span>
+            <div class="css skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">70%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <span>Java Script</span>
+            <div class="javascript skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">50%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <span>BootStrap</span>
+            <div class="bootstrap skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">80%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <span>ReactJs</span>
+            <div class="reactjs skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">20%</span>
+                </div>
+            </div>
+        </div>
+        <div class="skill-container">
+            <span>Python</span>
+            <div class="python skill-bar">
+                <div class="skill-percentage">
+                    <span class="tooltip">90%</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

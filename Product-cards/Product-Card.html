@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    body{
+        
+        display: grid;
+        place-items: center;
+    }
+    h2{
+        margin: 30px 0;
+    }
+    .cards{
+    width: 300px;
+    border:1px solid rgba(211,211,211,0.54);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 10px;
+    }
+    .cards:hover{
+        box-shadow: 0px 20px 50px -10px rgba(0,0,0,0.2);
+    }
+    .cards img{
+        width: 200px;
+        margin-top: 20px;
+        height: 240px;
+        transition: 0.5s;
+    }
+    .cards img:hover{
+        transform: rotate(10deg) scale(1.2);
+    }
+    .product-detail{
+        color: grey;
+        padding: 0 10px;
+    }
+    .product-cost{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .buy-btn{
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 15px;
+        font-weight: 500;
+    }
+    .product-color{
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        border: 2px dotted lightgrey;
+        padding: 8px 20px;
+        border-radius: 40px;
+    }
+    .product-color span{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 4px;
+        transition: 0.5s;
+    }
+    .product-color span:hover{
+        transition: 0.5s;
+        transform: scale(1.7);
+    }
+    #red{
+        background-color: crimson;
+    }
+    #orange{
+        background-color: #fe7427;
+    }
+    #black{
+        background-color: black;
+    }
+    .buy-btn{
+        cursor:pointer;
+    }
+</style>
+<body>
+    <h2>Responsive Product Cards</h2>
+    <div class="main-container">
+        <div class="cards">
+            <img src="./images/images-removebg-preview.png" alt="Product-image">
+            <div class="product-color">
+                <span id="red"></span>
+                <span id="orange"></span>
+                <span id="black"></span>
+            </div>
+
+                <h3 class="product-name">Nike | Air Max Pro</h3>
+                <p class="product-detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates, molestiae?</p>
+                <p class="product-cost">select color</p>
+
+                <div class="buy-btn">Buy Now</div>
+            </div>
+        </div>
+        <script>
+            let red = document.getElementById('red');
+            let black = document.getElementById('black');
+            let orange = document.getElementById('orange');
+            let btn = document.querySelector('.buy-btn');
+            let cost = document.querySelector('.product-cost');
+
+            red.addEventListener('click',() =>{
+                btn.style.backgroundColor = '#E6404D'
+                cost.innerHTML = 'Rs.1015';
+            })
+            black.addEventListener('click',() =>{
+                btn.style.backgroundColor = 'black';
+                cost.innerHTML = 'Rs.945';
+            })
+            orange.addEventListener('click',() =>{
+                btn.style.backgroundColor = '#FE7427'
+                cost.innerHTML = 'Rs.1199';
+            })
+        </script>
+</body>
+</html>

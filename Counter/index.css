@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 1px solid white;
+    border: none;
+    border-radius: 12px;
+    background:transparent;
+    width: 700px;
+    height: 500px;
+}
+body{
+    display: grid;
+    place-items: center;
+    margin-top: 180px;
+    background:url(./images/stacked-peaks-haikei.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#count{
+    text-align: center;
+    padding: 10% 20%;
+    font-size: 100px;
+    color:antiquewhite;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.buttons{
+    display: flex;
+    justify-content:space-around;
+    height: 40px;
+    
+}
+#reset{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+}
+#reset button{
+    color: red;
+    border-radius: 5px;
+    border: none;
+    background-color:beige;
+    height: 30px;
+    width: 100px;
+    transition: 0.4s;
+    box-shadow: #c0392b 0px 4px 2px, #000 0px 4px 5px;
+}
+#reset button:active{
+    box-shadow: 0px 6px 1px;
+
+}
+#increase,#decrease{
+    font-size: 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    border: none;
+    background-color:burlywood;
+    width: 100px;
+    opacity: 0.8;
+    box-shadow: #c0392b 0px 4px 2px, #000 0px 4px 5px;
+}
+#increase:hover,#decrease:hover{
+    opacity: 1;
+}
+#increase:active,#decrease:active{
+    top: 4px;
+    box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+
+}
+

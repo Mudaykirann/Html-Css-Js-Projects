@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!--Font-Awesome-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background:cornsilk;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+    .container{
+        margin: auto;
+        width: 500px;
+        max-width: 90%;
+    }
+    .container form{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background:white;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    }
+    .container form::before{
+        transform: tr;
+    }
+    .container form .form-control{
+        width: 100%;
+        height: 40px;
+        background:#fff;
+        border-radius: 4px;
+        margin: 10px 0 18px 0;
+        padding: 0 10px;
+    }
+    .container form h1,p{
+        text-align: center;
+        margin-bottom: 24px;
+        color: #222;
+    }
+    .container form .btn{
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background:chartreuse;
+        cursor: pointer;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: black;
+        border-radius: 14px;
+    }
+    .container form .btn:hover{
+        opacity: 0.7;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:center;
+        gap: 2rem;
+        margin-top: 1rem;
+        text-decoration: none;
+        
+    }
+    .icon{
+        margin: 1rem 1rem ;
+        border: 1px solid black;
+        height: 50px;
+        border: none;
+        text-align: center;
+        padding-top: 0.7rem;
+        width: 50px;
+        border-radius: 50%;
+        font-size: 35px;
+    }
+    .icon:hover{
+        color: orangered;
+    }
+    p{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    #username-err{
+        color:red;
+        font-size: 16px;
+        margin-top: 0px;
+        padding-right: 15rem;
+        display: none;
+    }
+    #login-form{
+        display: none;
+    }
+    .close{
+        display: flex;
+        justify-content: end;
+        top: -20px;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: red;
+    }
+</style>
+<body>
+    <section class="login">
+        <button type="button"  class="btn btn-primary btn-lg" id="button">Login</button>
+    </section>
+    <section id="login-form">
+        <div class="container">
+            <form action="" >
+                <div class="close">
+                    <i class="bi bi-x" id="close"></i>
+                </div>
+                <h1 >Welcome</h1>
+                <p >Please continue to sign in..</p>
+                <div class="form-group">
+                    <input  class = "form-control" id="username" type="text" placeholder="username" required>
+                    <p id="username-err">please enter valid username</p>
+                </div>
+                <div class="form-group">
+                    <input type="password" class = "form-control"  placeholder="password" required>
+                </div>
+                <input type="submit" onclick="alert('data submittted')" class="btn" value="login">
+                <p >or Signup using</p>
+                <div class="icons">
+                    <a href="www.facebook.com" target="_blank">
+                        <i class="fab fa-google icon"></i>
+                    </a>
+        
+                    <a href="www.linkedin.com" target="_blank">
+                        <i class="fab fa-linkedin icon"></i>
+                    </a>
+                    <a href= "www.github.com"  target="_blank" >
+                        <i class="fab fa-github icon"></i>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script text="text/javascript">
+        let loginpage = document.getElementById('login-form');
+        var btn = document.getElementById('button');
+        var username = document.querySelector('#username');
+        var usernameErr = document.querySelector('#username-err');
+        var closebtn = document.getElementById('close');
+
+        console.log()
+
+
+        
+        closebtn.addEventListener('click',function () {
+            loginpage.style.display = 'none';
+            btn.style.display = 'block';
+        });
+
+        btn.addEventListener('click',function () {
+            loginpage.style.display = 'block';
+            btn.style.display = 'none';
+        });
+
+        username.addEventListener('input',function(e){
+            var pattern = /^[\w]{6,12}$/;
+            var currentValue = e.target.value;
+            var valid = pattern.test(currentValue);
+
+            if(valid){
+                usernameErr.style.display = 'none';
+            }else{
+                usernameErr.style.display = 'block';
+            }
+
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
