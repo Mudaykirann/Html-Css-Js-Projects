@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:#24262b;
+    background: url(./images/4k-earth-distant-view-fm2rh9t0kiuhhhre.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    backdrop-filter: blur;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    transform: translate(-50%,-50%);
+    color:white;
+    height: 200px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    backdrop-filter: blur(7px);
+}
+.clock{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+    transform: translate(-50%,-70%);
+}
+.hours,.minutes,.seconds{
+    border: 1px solid black;
+    border-radius: 5px;
+    border: none;
+}
+#date{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+}
+#matter ul{
+    text-transform: capitalize;
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 17px;
+}
+.circle{
+    height:120px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    color:chartreuse;
+    background:linear-gradient(45deg,pink,violet);
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: -1;
+}
+.circle1{
+    height:120px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    color:chartreuse;
+    background:linear-gradient(45deg,pink,violet);
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: 54%;
+    left: 62.5%;
+    z-index:-1;
+
+}
+
+
+
+
+
