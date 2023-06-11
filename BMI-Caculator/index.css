@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.flex-div{
+    display: flex;
+    align-items: center;
+}
+nav{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #155263; 
+    position: sticky;
+    top: 0;
+    color: #fff;
+    z-index: 10;
+}
+
+.nav-left img{
+    width: 30px;
+}
+.nav-left{
+    gap: 0.7rem;
+}
+.nav-right ul li a{
+    color: #fff;
+}
+.nav-right ul{
+    color: #fff;
+    gap: 0.7rem;
+}
+.nav-right ul li{
+    border: 1px solid #fff;
+    border: none;
+    border-radius:5px;
+    width: 50px;
+    text-align: center;
+    transition: all 0.4s ease;
+    color: #fff;
+}
+.nav-right ul li:hover{
+    background-color: blue;
+    color: #fff;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    width:400px;
+    height: 250px;
+    border-radius: 15px;
+    background:lightgreen;
+    border: none; 
+    box-shadow: 4px 8px 5px rgba(0,0,0,0.5);
+}
+.first-section{
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.second-section{
+    justify-content: space-around;
+    padding-top: 30px;
+}
+#result{
+    text-align: center;
+    font-size: 20px;
+    color:black;
+    margin-top: 25px;
+    position: absolute;
+    left: 20%;
+    top:50%;
+
+}
+.buttons{
+    display: flex;
+    padding-top: 100px;
+    justify-content:space-around;
+}
+.first-section select{
+    border-radius: 5px;
+    background:lightgreen;
+    width: 100px;
+    text-align: center;
+    height: 25px;
+    cursor: pointer;
+}
+.second-section select{
+    border-radius: 5px;
+    background:lightgreen;
+    width: 100px;
+    text-align: center;
+    height: 25px;
+    cursor: pointer;
+}
+.first-section input{
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    height: 25px;
+    text-align: center;
+}
+.second-section input{
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    height: 25px;
+    text-align: center;
+}
+.buttons .reset{
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    background: #f96d00;
+    cursor: pointer;
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
+    box-shadow: 0px 1px 6px 0px rgb(0,0,0,0.2);
+}
+.buttons .reset:active{
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.buttons .calc{
+    width: 70px;
+    background: #f96d00;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: translate(0, -3px);
+    transition: 0.2s;
+    transition-timing-function: linear;
+    box-shadow: 0px 1px 6px 0px rgb(0,0,0,0.2);
+}
+.buttons .calc:active{
+    transform: translate(0, 0);
+    border-bottom: 2px solid rgb(50, 50, 50);
+}
+

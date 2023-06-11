@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<link rel="stylesheet" href="./index.css">
+<body>
+    
+
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="./images/bmi.png" alt="">
+            <h3>Body Mass Index</h3>
+        </div>
+        <div class="nav-right ">
+            <ul class="list flex-div">
+                <li><a href="">Home</a></li>
+                <li><a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html" target="_blank">About</a></li>
+                <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Frwjms.rutgers.edu%2Fdepartments%2Fsurgery%2Fdivisions%2Fother%2Fdivision-of-pediatric-surgery%2Fadolescent-obesity-and-foregut-surgery-program%2Fcalculating-bmi&psig=AOvVaw2pO_M4UvcpQQga6itYWrTV&ust=1686581627411000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNDbnam8u_8CFQAAAAAdAAAAABAE" target="_blank">Chart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!---------------Main----------->
+    <div class="container">
+        <section>
+            <div class="first-section flex-div">
+                <h4>Weight:</h4>
+                <select name="" id="weight-option">
+                    <option value="Kgs">Kgs</option>
+                    <option value="Pounds">Pounds</option>
+                </select>
+                <input type="number" id="wieght-value" placeholder="Enter your weight...">
+            </div>
+        <div class="second-section flex-div">
+            <h4>Height:</h4>
+            <select name="" id="height-option">
+                <option value="Centimeters">Centimeters</option>
+                <option value="Inches">Inches</option>
+            </select>
+            <input type="number" id="hieght-value" placeholder="Enter your Height...">
+        </div>
+        <div id="result"></div>
+        <div class="buttons">
+            <button class="reset">Reset</button>
+            <Button class="calc">Calculate</Button>
+        </div>
+        </section>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>
