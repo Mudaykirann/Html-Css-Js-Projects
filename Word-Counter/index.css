@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+body{
+    background: url(./images/guns-YkCG2OrEPEw-unsplash.jpg);
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 350px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.2);
+    border: none;
+    background-color:transparent;
+}
+.container .content{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .content textarea{
+    height: 100px;
+    text-align:left;
+    background: transparent;
+    border-radius: 8px;
+    border:0.5px solid black;
+    outline: none;
+}
+.container .content button{
+    width: 120px;
+    margin-left: 150px;
+    color: black;
+}
+.container .content button:active{
+    box-shadow: 4px 8px 4px rgba(0,0,0,0.4);
+}
+#result{
+    font-size: 30px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+    font-weight: 700;
+}
