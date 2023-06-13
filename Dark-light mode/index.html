@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Light Mode</title>
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+}
+.container img{
+    width: 30px;
+    cursor: pointer;
+    background: transparent;
+}
+.moony{
+    display: none;
+}
+.dark-mode{
+    background-color: black;
+}
+</style>
+<body>
+    <div class="container">
+        <img src="./images/download (1).png" class="img" alt="">
+    </div>
+
+    <script type="text/javascript">
+        var body = document.body;
+        var btn = document.querySelector(".img");
+
+        btn.onclick = function(){
+            body.classList.toggle('dark-mode');
+            if( body.classList.contains('dark-mode')){
+                btn.src = './images/sun.png';
+            }
+            else{
+                btn.src = "./images/download (1).png";
+            }
+        }
+    </script>
+</body>
+</html>
