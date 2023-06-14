@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Voice</title>
+</head>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background:url(./images/wave-haikei\ \(1\).png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .container .but img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        background-color: blue;
+
+    }
+    .container #text{
+        width: 400px;
+        font-size: large;
+        height: 250px;
+        padding-top: 0.7rem;
+        padding-left: 0.5rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+
+    }
+</style>
+<body>
+    <div class="container">
+        <textarea name="text" id="text"></textarea>
+        <div class="but">
+            <button class="btn"><img src="./images/voice.png" alt=""></button>
+        </div>
+    </div>
+    <script src="./index.js">
+    </script>
+</body>
+</html>
