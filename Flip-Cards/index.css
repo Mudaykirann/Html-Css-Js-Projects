@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background: url(./images/cool-background.png);
+}
+.container{
+    display: flex;
+    gap: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.flip-card-front img{
+    background-size: cover;
+    border-radius: 24px 24px;
+    width: 290px;
+    height: 290px;
+    border:none;
+    outline:none;
+}
+.flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    border-radius: 24px;
+}
+.flip-card-inner{
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border-radius: 24px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    border-radius: 24px;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-front{
+    background-color:burlywood;
+    color: black;
+}
+.flip-card-back{
+    background-color:#bbb;
+    color:black;
+    height: 290px;
+    transform: rotateY(180deg);
+}
+.flip-card-back .card-title{
+    margin-top: 20px;
+}
+.flip-card-back .card-body{
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+.flip-card-back .card-body button{
+    color: black;
+    border-radius: 8px;
+    border: none;
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    font-size: 15px;
+}
+.flip-card-back .card-body button:hover{
+    background-color:cadetblue;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media screen and (max-width:768px) {
+    .container{
+        gap: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;   
+        gap: 6.5rem;
+    }
+}
