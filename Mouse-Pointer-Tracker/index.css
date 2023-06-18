@@ -1,0 +1,21 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border:2px solid black;
+    width: 25%;
+    text-align: center;
+}
+#myDiv h1{
+    font-size: 100px;
+}
+#myDiv h1 span{
+    color: dodgerblue;
+}
+#myDiv h1 b{
+    color: red;
+}
